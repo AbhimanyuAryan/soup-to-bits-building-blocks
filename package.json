@@ -1,0 +1,23 @@
+{
+  "name": "soup-to-bits-building-blocks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julio-coelho/soup-to-bits-building-blocks.git"
+  },
+  "author": "julio-coelho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julio-coelho/soup-to-bits-building-blocks/issues"
+  },
+  "homepage": "https://github.com/julio-coelho/soup-to-bits-building-blocks#readme"
+}
