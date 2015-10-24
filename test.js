@@ -77,3 +77,16 @@ describe('Creating new cities', function(){
   });
 
 });
+
+describe('Deleting cities', function(){
+
+  it('Returning a 204 status code', function(done){
+
+    request(app)
+    .delete('/cities/Springfield')
+    .expect(204, done);
+
+  });
+
+});
+

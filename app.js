@@ -29,4 +29,12 @@ app.post('/cities', urlencodedParser, function(request, response){
   });
 });
 
+app.delete('/cities/:name', function(request, response){
+  redis.hdel('cities', request.params.name, function(err){
+    if (err) throw err;
+
+    response.sendStatus(204);
+  });
+});
+
 module.exports = app;
