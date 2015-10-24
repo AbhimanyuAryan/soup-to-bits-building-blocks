@@ -14,7 +14,7 @@
     "supertest": "^1.1.0"
   },
   "scripts": {
-    "test": "NODE_ENV=TST mocha -w test.js"
+    "test": "NODE_ENV=test mocha -w test.js"
   },
   "repository": {
     "type": "git",
