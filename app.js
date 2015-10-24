@@ -22,6 +22,13 @@ app.get('/cities', function(request, response){
 
 app.post('/cities', urlencodedParser, function(request, response){
   var newCity = request.body;
+
+  //Validate the input fields
+  if (!newCity.name || !newCity.description) {
+    response.sendStatus(400);
+    return;
+  }
+
   redis.hset('cities', newCity.name, newCity.description, function(err){
     if (err) throw err;
 

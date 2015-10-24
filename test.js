@@ -28,6 +28,15 @@ describe('Requests to the root path', function(){
 
   });
 
+  it('Validate city name and description', function(done){
+
+    request(app)
+    .post('/cities')
+    .send('name=&description=')
+    .expect(400, done);
+
+  });
+
 });
 
 describe('Listing cities on /cities', function(){
