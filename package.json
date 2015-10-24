@@ -5,14 +5,16 @@
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.14.1",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "hiredis": "^0.4.1",
+    "redis": "^2.2.5"
   },
   "devDependencies": {
     "mocha": "^2.3.3",
     "supertest": "^1.1.0"
   },
   "scripts": {
-    "test": "mocha test.js"
+    "test": "NODE_ENV=TST mocha -w test.js"
   },
   "repository": {
     "type": "git",

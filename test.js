@@ -1,6 +1,8 @@
 var request = require('supertest');
 var app = require('./app');
 
+require('./lib/redis').flushdb();
+
 describe('Requests to the root path', function(){
 
   it('Returns a 200 status code', function(done){
@@ -48,7 +50,7 @@ describe('Listing cities on /cities', function(){
 
     request(app)
     .get('/cities')
-    .expect(JSON.stringify(['Lotopia', 'Caspiana', 'Indigo']), done);
+    .expect([], done);
 
   });
 
