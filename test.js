@@ -87,6 +87,33 @@ describe('Creating new cities', function(){
 
 });
 
+describe('Shows city info', function(){
+
+  it('Returns a 200 status code', function(done){
+
+    request(app)
+    .get('/cities/Springfield')
+    .expect(200, done);
+
+  });
+
+  it('Returns HTML format', function(done){
+
+    request(app)
+    .get('/cities/Springfield')
+    .expect('Content-Type', /html/, done);
+
+  });
+
+  it('Returns city info', function(done){
+
+    request(app)
+    .get('/cities/Springfield')
+    .expect(/simpsons/, done);
+
+  });
+});
+
 describe('Deleting cities', function(){
 
   it('Returning a 204 status code', function(done){
@@ -98,4 +125,3 @@ describe('Deleting cities', function(){
   });
 
 });
-
